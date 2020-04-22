@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Students</title>
+</head>
+<body>
+
+<table>
+    <thead>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Course</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="student : ${students}">
+
+        <td th:text="${student.firstName}"></td>
+        <td th:text="${student.lastName}"></td>
+        <td th:text="${student.classRoom.title}"></td>
+
+    </tr>
+    </tbody>
+</table>
+
+    <!--
+        -------------------------------
+        | Avi | Simha | Java |
+        -------------------------------
+        | Avi | Yaron | Python |
+        --------------------
+     -->
+
+</body>
+</html>
